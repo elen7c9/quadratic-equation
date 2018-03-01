@@ -9,10 +9,13 @@ module.exports = function solveEquation(equation) {
   var x1 = ((-1)*b + Math.sqrt(d) ) / (2*a);
   var x2 = ((-1)*b - Math.sqrt(d) ) / (2*a);
   
+ var result = [];
   var result1; = [Math.round(x1), Math.round(x2)];
   var result2; = [Math.round(x2), Math.round(x1)];
 
-  if(x1>x2) return result2;
-  else return result1;
+  if(x1>x2) {result = result1;}
+  else if(x1<x2) {result = result2;}
+  
+  return result;
 
 }
