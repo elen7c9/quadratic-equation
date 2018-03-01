@@ -10,4 +10,6 @@ module.exports = function solveEquation(equation) {
   var x2 = ((-1)*b - Math.sqrt(d) ) / (2*a);
   
   var result = [Math.round(x1), Math.round(x2)];
+  
+  return result;
 }
